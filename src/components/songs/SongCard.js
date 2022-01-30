@@ -9,7 +9,7 @@ const SongCard = ({ data, setClicked }) => {
         <img className='image' src={data.pictureLink} alt='profile' />
         <div className='title'>{data.title}</div>
         <div className='singer-name'>{data.singer}</div>
-        <audio src={data.songLink} controls />
+        <audio className='audio-play' src={data.songLink} controls />
 
     </div>;
 };
