@@ -38,7 +38,7 @@ const SignUp = () => {
                 <div className='content'>Sign In to enjoy unlimited music</div>
                 <GoogleLogin
                     // clientId={"309146035179-ek0eo1vtc3c6sdji2l7bnc0akcfsjq60.apps.googleusercontent.com"}
-                    clientId={"290011825413-m6s7magntr8cr55ts1cvlnd3vf1joh8t.apps.googleusercontent.com"}
+                    clientId={"290011825413-jqd48c0g8umvhjcgtjli8469l898gbqh.apps.googleusercontent.com"}
                     render={renderProps => (
                         <img src="https://bloomfield.edu/sites/default/files/2020-01/google_logo.png" className="google-sign-in-button" id="reviewBtn"
                             alt='google-logo'
