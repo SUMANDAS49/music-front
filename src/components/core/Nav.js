@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
-import { getUserDetails, isAuthenticated, logoutHelper } from '../auth/AuthHelper'
+import React from 'react'
+import { Link } from 'react-router-dom'
+// import { getUserDetails, isAuthenticated, logoutHelper } from '../auth/AuthHelper'
 import "./navStyle.css"
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
-const styleIcon = {
 
-}
 const Nav = () => {
     return (
         <div className='nav-container'>

@@ -6,7 +6,7 @@ const SongCard = ({ data, setClicked }) => {
         <div><KeyboardBackspaceIcon onClick={() => {
             setClicked(false)
         }} /></div>
-        <img className='image' src={data.pictureLink} />
+        <img className='image' src={data.pictureLink} alt='profile' />
         <div className='title'>{data.title}</div>
         <div className='singer-name'>{data.singer}</div>
         <audio src={data.songLink} controls />

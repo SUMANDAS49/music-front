@@ -7,7 +7,7 @@ const SongListItem = ({ data, setClicked, setClickedDetails }) => {
             setClicked(true)
         }}
     >
-        <img className='pic' src={data.pictureLink} />
+        <img className='pic' src={data.pictureLink} alt='profile' />
         <div className='song-details-container' >
             <div className='song-name'>{data.title}</div>
             <div className='singer-name'>{data.singer}</div>
