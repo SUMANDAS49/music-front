@@ -1,0 +1,49 @@
+.song-list-item-container {
+  margin: 3px;
+  display: flex;
+  background-color: rgb(27, 24, 24);
+}
+.song-list-item-container .song-name {
+  margin-left: 20px;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+}
+.song-list-item-container .song-details-container {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.song-list-item-container .singer-name {
+  font-size: 16px;
+  color: #d1d0d0;
+  margin-left: 20px;
+}
+.song-list-item-container .pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+/* song card styles ************************************************** */
+.song-card-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.song-card-container .image {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+.song-card-container .title {
+  margin-top: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+.song-card-container .singer-name {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+.base-container {
+  height: 100vh;
+  max-width: 600px;
+  margin: auto;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.base-childs {
+  overflow-y: scroll;
+}
