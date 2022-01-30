@@ -27,7 +27,7 @@ const Routing = () => {
                         <SignUp />
                     </PublicRoute>
                 } />
-                //Admin related Routes
+                {/* //Admin related Routes */}
                 <Route path="/addSong" element={
                     <PrivateRoute redirectTo="/signup">
                         <AddSong />
