@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./songStyle.css"
 const SongListItem = ({ data, setClicked, setClickedDetails }) => {
+    const [title, setTitle] = useState("")
+    const [loading, setLoanding] = useState(true)
+    useEffect(() => {
+        let dta = ""
+        dta = data.title;
+        if (dta.length < 15) {
+            setTitle(data.title)
+            setLoanding(false)
+        }
+        else {
+            setTitle(dta.substring(0, 14) + "...")
+            console.log(dta.substring(0, 14) + "...")
+            setLoanding(false)
+        }
+    }, [])
     return <div className='song-list-item-container'
         onClick={() => {
             setClickedDetails(data)
             setClicked(true)
         }}
     >
-        <img className='pic' src={data.pictureLink} alt='profile' />
-        <div className='song-details-container' >
-            <div className='song-name'>{data.title}</div>
-            <div className='singer-name'>{data.singer}</div>
-        </div>
+        {
+            !loading && <>
+                <img className='pic' src={data.pictureLink} alt='profile' />
+                <div className='song-details-container' >
+                    <div className='song-name'>{title}</div>
+                    <div className='singer-name'>{data.singer}</div>
+                </div>
+            </>}
+        {
+            loading && <h3>Loading...</h3>
+        }
     </div >;
 };
 
