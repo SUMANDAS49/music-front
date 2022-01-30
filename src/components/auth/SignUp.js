@@ -10,7 +10,7 @@ const SignUp = () => {
     const [redirectOccur, setRedirectOccur] = useState(false)
     /**google auth functions are here  */
     const handleFailure = (result) => {
-        alert("something went wrong")
+        console.log(result)
     }
     const redirectToHelper = (path) => {
         console.log("hi********************")
