@@ -13,8 +13,8 @@ const Nav = () => {
 
             <div><Link to={"/"}><HomeRoundedIcon className='icon' fontSize='2.2rem' /></Link></div>
             <div><Link to={"/search"}><SearchRoundedIcon className='icon' fontSize='2.2rem' /></Link></div>
-            <div><FavoriteBorderRoundedIcon className='icon' fontSize='30px' /></div>
-            <div><SettingsRoundedIcon className='icon' fontSize={'2.2rem'} /></div>
+            <div><Link to="/"><FavoriteBorderRoundedIcon className='icon' fontSize='30px' /></Link></div>
+            <div><Link to={"/setting"}><SettingsRoundedIcon className='icon' fontSize={'2.2rem'} /></Link></div>
         </div>
 
 

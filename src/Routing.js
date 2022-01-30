@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AddSong from './components/admin/AddSong'
 import SignUp from './components/auth/SignUp'
 import Search from './components/core/core-components/Search'
+import Setting from './components/core/core-components/Setting'
 import Home from './components/core/Home'
 import PrivateRoute from './components/util/PrivateRoute'
 import PublicRoute from './components/util/PublicRoute'
@@ -20,6 +21,11 @@ const Routing = () => {
                 <Route path="/search" element={
                     <PrivateRoute redirectTo="/">
                         <Search />
+                    </PrivateRoute>
+                } />
+                <Route path="/setting" element={
+                    <PrivateRoute redirectTo="/signup">
+                        <Setting />
                     </PrivateRoute>
                 } />
                 <Route path="/signup" element={

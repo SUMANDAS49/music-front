@@ -1,0 +1,14 @@
+.setting-container {
+  color: white;
+}
+.setting-container .title {
+  background-color: rgb(27, 25, 25);
+  padding: 15px;
+  font-size: 25px;
+}
+.setting-container .option-list {
+}
+.setting-container .option-list .option-list-item {
+  font-size: 20px;
+  padding: 10px;
+}
