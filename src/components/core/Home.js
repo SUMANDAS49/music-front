@@ -12,7 +12,7 @@ const Home = () => {
     const [clickedDetails, setClickedDetails] = useState({})
     useEffect(() => {
         getAllSongs().then((res) => {
-            console.log(res)
+            // console.log(res)
             setSongs(res.songs)
         })
     }, [])
@@ -20,7 +20,7 @@ const Home = () => {
         <div>
             <Base>
                 {!clicked && songs.map((song) => {
-                    return <SongListItem setClicked={setClicked} setClickedDetails={setClickedDetails} data={song} />
+                    return <SongListItem key={`${song.title}`} setClicked={setClicked} setClickedDetails={setClickedDetails} data={song} />
                 })}
                 {
                     clicked && <SongCard setClicked={setClicked} data={clickedDetails} />

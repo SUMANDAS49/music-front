@@ -1,6 +1,8 @@
 import React from 'react'
 import Nav from "./Nav"
 import "./baseStyle.css"
+import { isAuthenticated } from '../auth/AuthHelper'
+
 const Base = ({ children }) => {
 
     return (
@@ -9,8 +11,10 @@ const Base = ({ children }) => {
             <div className='base-childs'>
                 {children}
             </div>
+            {
+                isAuthenticated() && <Nav />
+            }
 
-            <Nav />
         </div>
     )
 }

@@ -13,7 +13,7 @@ const SongListItem = ({ data, setClicked, setClickedDetails }) => {
         }
         else {
             setTitle(dta.substring(0, 14) + "...")
-            console.log(dta.substring(0, 14) + "...")
+            // console.log(dta.substring(0, 14) + "...")
             setLoanding(false)
         }
     }, [])

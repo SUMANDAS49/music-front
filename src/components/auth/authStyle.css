@@ -10,7 +10,7 @@
   margin: auto;
 
   box-shadow: 1px 1px 10px 4px #c1c1c1;
-
+  background-color: #e2e2e2;
   border-radius: 10px;
   position: relative;
   top: 300px;
@@ -42,8 +42,11 @@
     text-align: center;
   }
   .content {
+    font-family: "Nunito", sans-serif;
   }
   .google-sign-in-button {
+    width: 168px;
+    height: auto;
   }
   .google-sign-in-button:hover {
   }
