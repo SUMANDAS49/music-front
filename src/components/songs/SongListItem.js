@@ -36,7 +36,7 @@ const SongListItem = ({ data, setClicked, setClickedDetails }) => {
 
         }
         {
-            !loading && <div className='fev-icon'><FavoriteIcon /></div>
+            // !loading && <div className='fev-icon'><FavoriteIcon /></div>
         }
 
         {

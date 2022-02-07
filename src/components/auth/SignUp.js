@@ -8,6 +8,7 @@ import Base from "../core/Base"
 
 const SignUp = () => {
     const [redirectOccur, setRedirectOccur] = useState(false)
+    const [error, setError] = useState(false)
     /**google auth functions are here  */
     const handleFailure = (result) => {
         console.log(result)
@@ -18,9 +19,18 @@ const SignUp = () => {
     }
     const handleSubmit = (name, email, image, idToken) => {
         signInApiCall(name, email, image, idToken).then((res) => {
-            localStorage.setItem("userData", JSON.stringify(res))
-            setRedirectOccur(true)
+            if (res != undefined) {
+                console.log(res + "<<<<<")
+                localStorage.setItem("userData", JSON.stringify(res))
+                setRedirectOccur(true)
+            }
+            else {
+                setError(true)
+            }
 
+
+        }).catch((err) => {
+            console.log("hi")
         })
 
     }
@@ -36,6 +46,9 @@ const SignUp = () => {
             <div className='sign-in-container'>
                 {redirectOccur && redirectToHelper("/")}
                 <div className='content'>Sign In to enjoy unlimited music</div>
+                {
+                    error && <span style={{ color: "red" }}>something went wrong please try again</span>
+                }
                 <GoogleLogin
                     // clientId={"309146035179-ek0eo1vtc3c6sdji2l7bnc0akcfsjq60.apps.googleusercontent.com"}
                     clientId={"290011825413-jqd48c0g8umvhjcgtjli8469l898gbqh.apps.googleusercontent.com"}

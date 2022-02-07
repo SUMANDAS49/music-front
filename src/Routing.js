@@ -5,6 +5,7 @@ import SignUp from './components/auth/SignUp'
 import Search from './components/core/core-components/Search'
 import Setting from './components/core/core-components/Setting'
 import Home from './components/core/Home'
+import LikedSongs from './components/songs/LikedSongs'
 import PrivateRoute from './components/util/PrivateRoute'
 import PublicRoute from './components/util/PublicRoute'
 
@@ -26,6 +27,11 @@ const Routing = () => {
                 <Route path="/setting" element={
                     <PrivateRoute redirectTo="/signup">
                         <Setting />
+                    </PrivateRoute>
+                } />
+                <Route path="/likedSongs" element={
+                    <PrivateRoute redirectTo="/signup">
+                        <LikedSongs />
                     </PrivateRoute>
                 } />
                 <Route path="/signup" element={
