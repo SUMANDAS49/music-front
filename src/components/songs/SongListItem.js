@@ -7,7 +7,7 @@ const SongListItem = ({ data, setClicked, setClickedDetails }) => {
     useEffect(() => {
         let dta = ""
         dta = data.title;
-        if (dta.length < 15) {
+        if (dta.length < 26) {
             setTitle(data.title)
             setLoanding(false)
         }

@@ -1,0 +1,23 @@
+.loader-container {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 34vh;
+}
+.loader-main {
+  height: 210px;
+  width: 275px;
+}
+
+/* coming soon style **************************** */
+
+.coming-soon-container {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 40vh;
+}
+.coming-soon-main {
+  height: 110px;
+  width: 342px;
+}

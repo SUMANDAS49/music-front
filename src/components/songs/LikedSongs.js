@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Base from '../core/Base'
+import Loader from '../util/Loader';
 import SongCard from './SongCard';
 import SongListItem from './SongListItem';
 
@@ -8,20 +9,25 @@ const LikedSongs = () => {
     const [songs, setSongs] = useState([])
     const [clicked, setClicked] = useState(false);
     const [clickedDetails, setClickedDetails] = useState({})
+    const [loading, setLoanding] = useState(true);
     useEffect(() => {
         getLikedSongsFull().then((res) => {
             // console.log(res)
             setSongs(res.songs)
+            setLoanding(false)
         })
     }, [])
     return (
         <div>
             <Base>
-                {!clicked && songs.map((song) => {
+                {!loading && !clicked && songs.map((song) => {
                     return <SongListItem key={`${song.title}`} setClicked={setClicked} setClickedDetails={setClickedDetails} data={song} />
                 })}
                 {
-                    clicked && <SongCard setClicked={setClicked} data={clickedDetails} />
+                    !loading && clicked && <SongCard setClicked={setClicked} data={clickedDetails} />
+                }
+                {
+                    loading && <Loader />
                 }
 
 

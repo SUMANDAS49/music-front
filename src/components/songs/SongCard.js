@@ -13,7 +13,6 @@ const SongCard = ({ data, setClicked }) => {
     const isLikedSong = () => {
         let flag = false;
         likedSongs.forEach((e) => {
-            console.log("hello")
             if (e == data._id)
                 flag = true
             setLikeStatus(flag)
@@ -38,7 +37,7 @@ const SongCard = ({ data, setClicked }) => {
         }
         else {
             setTitle(dta.substring(0, 14) + "...")
-            console.log(dta.substring(0, 14) + "...")
+            // console.log(dta.substring(0, 14) + "...")
             setLoanding(false)
         }
     }, [])

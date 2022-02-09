@@ -1,9 +1,10 @@
 import React from 'react';
+import ComingSoon from '../../util/ComingSoon';
 import Base from "../Base"
 const Search = () => {
     return <Base>
         <div>
-            <input />
+            <ComingSoon />
         </div>
     </Base>;
 };
