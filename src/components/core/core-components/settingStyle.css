@@ -11,4 +11,6 @@
 .setting-container .option-list .option-list-item {
   font-size: 20px;
   padding: 10px;
+  text-decoration: none;
+  color: white;
 }

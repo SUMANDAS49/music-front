@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import AddSong from './components/admin/AddSong'
+import AddSong from './components/admin/adminComponents/AddSong'
+import AdminDashBoard from './components/admin/AdminDashBoard'
 import SignUp from './components/auth/SignUp'
 import Search from './components/core/core-components/Search'
 import Setting from './components/core/core-components/Setting'
@@ -43,6 +44,11 @@ const Routing = () => {
                 <Route path="/addSong" element={
                     <PrivateRoute redirectTo="/signup">
                         <AddSong />
+                    </PrivateRoute>
+                } />
+                <Route path="/adminArea" element={
+                    <PrivateRoute redirectTo="/signup">
+                        <AdminDashBoard />
                     </PrivateRoute>
                 } />
             </Routes>

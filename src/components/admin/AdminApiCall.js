@@ -16,3 +16,16 @@ export const uploadSongApi = (data) => {
         console.log(err)
     })
 }
+
+export const getAllUsers = () => {
+    return fetch(`${API}/user/allUsers`, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+        }
+    }).then((res) => {
+        return res.json();
+    }).catch((err) => {
+        console.log(err)
+    })
+}

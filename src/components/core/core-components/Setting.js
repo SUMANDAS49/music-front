@@ -1,8 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { logoutHelper } from '../../auth/AuthHelper';
+import { Link, useNavigate } from 'react-router-dom';
+import { isUserAdmin, logoutHelper } from '../../auth/AuthHelper';
 import Base from '../Base';
 import "./settingStyle.css"
+
 const Setting = () => {
     const navigate = useNavigate()
     const logOutHandler = () => {
@@ -18,6 +19,7 @@ const Setting = () => {
                     <div className='option-list-item'>Preferances</div>
                     <div className='option-list-item'>Privacy policy</div>
                     <div className='option-list-item'>History</div>
+                    {isUserAdmin() && <Link to="/adminArea"><div className='option-list-item'>Admin Area</div></Link>}
                     <div className='option-list-item' onClick={() => {
                         logOutHandler()
                     }}>Log out</div>

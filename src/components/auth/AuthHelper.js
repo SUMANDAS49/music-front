@@ -42,3 +42,9 @@ export const getUserDetails = () => {
 export const logoutHelper = () => {
     localStorage.removeItem("userData")
 }
+export const isUserAdmin = () => {
+    let role = JSON.parse(localStorage.getItem("userData")).role
+    if (role !== undefined) {
+        return role == 1
+    }
+}

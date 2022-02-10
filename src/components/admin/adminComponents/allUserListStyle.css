@@ -1,0 +1,26 @@
+.user-list {
+  /* display: flex; */
+}
+.user-list .user-list-item {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  align-items: center;
+  padding: 10px;
+  border: 0.5px solid black;
+}
+.user-list .user-list-item .user-list-item-name {
+  width: 300px;
+}
+.user-list .user-list-item .user-list-item-email {
+  width: 300px;
+}
+.user-list .user-list-item .user-list-item-role {
+  width: 30px;
+}
+.user-list .user-list-item .user-list-item-image {
+  width: 40px;
+}
+.table-head {
+  background-color: blueviolet;
+}
