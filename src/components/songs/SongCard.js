@@ -4,6 +4,8 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { likeSong, getLikedSongsById, unlikeSong } from './SongsHelper';
 
+import { AudioPlayer } from './AudioPlayer';
+
 const SongCard = ({ data, setClicked }) => {
     const [title, setTitle] = useState("")
     const [loading, setLoanding] = useState(true)
@@ -66,7 +68,8 @@ const SongCard = ({ data, setClicked }) => {
                     {(likeStatus) && <div className='dislike-button' onClick={() => {
                         unlikeHelper()
                     }}><FavoriteIcon /></div>}
-                    <audio className='audio-play' src={data.songLink} controls />
+                    {/* <audio className='audio-play' src={data.songLink} controls /> */}
+                    <AudioPlayer songLink={data.songLink} />
                 </div>
             )
 
