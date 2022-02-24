@@ -76,17 +76,17 @@ const AudioPlayer = ({ songLink }) => {
                 controls src={songLink}
                 preload='metadata'
             />
-
-            <div className={styles.progressBarTimeContainer}>
+            {/* progress bar */}
+            <div>
+                <input className={styles.progressBar} defaultValue={0} type="range" ref={progressBar}
+                    onChange={changeRange}
+                />
+            </div>
+            <div className={styles.TimeContainer}>
                 {/* current time */}
                 <div className={styles.currentTime}>{calculateTime(currentTime)}</div>
 
-                {/* progress bar */}
-                <div>
-                    <input className={styles.progressBar} defaultValue={0} type="range" ref={progressBar}
-                        onChange={changeRange}
-                    />
-                </div>
+
                 <div className={styles.duration}>
                     {duration && !isNaN(duration) && calculateTime(duration)}
                 </div>
