@@ -91,9 +91,9 @@ const AudioPlayer = ({ songLink }) => {
                     {duration && !isNaN(duration) && calculateTime(duration)}
                 </div>
             </div>
-            <button className={styles.forwardBackward}>
+            {/* <button className={styles.forwardBackward}>
                 <FiArrowLeft /> 30
-            </button>
+            </button> */}
 
             <button className={styles.playPause} onClick={togglePlayPause} >
                 {isPlaying ?
@@ -104,9 +104,9 @@ const AudioPlayer = ({ songLink }) => {
                 }
             </button>
 
-            <button className={styles.forwardBackward}>
+            {/* <button className={styles.forwardBackward}>
                 30 <FiArrowRight />
-            </button>
+            </button> */}
 
 
         </div>
