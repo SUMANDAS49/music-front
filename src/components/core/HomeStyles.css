@@ -1,0 +1,30 @@
+.home-container{
+
+}
+.playlist-default{
+/* background-color: yellow; */
+height: auto;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.playlist-default-items{
+    background-color: #0000003f;
+    width: 177px;
+    height: 35px;
+    font-size: 22px;
+    text-align: center;
+    margin: 3px;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.wish-to-user{
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+    font-weight: bold;
+}

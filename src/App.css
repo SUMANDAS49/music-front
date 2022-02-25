@@ -6,6 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
+.page-title{
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.438);
+  font-family: 'Nunito', sans-serif;;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,7 +1,7 @@
 .song-list-item-container {
   margin: 3px;
   display: flex;
-  background-color: rgb(27, 24, 24);
+  background-color: rgba(0, 0, 0, 0.185);
   justify-content: space-between;
 }
 .song-list-item-container .song-name {
@@ -18,7 +18,7 @@
 }
 .song-list-item-container .singer-name {
   font-size: 13px;
-  color: #d1d0d0;
+  color: #f8f8f8;
   margin-left: 20px;
 }
 .song-list-item-container .pic {

@@ -5,8 +5,8 @@
     width: 300px;
 }
 .audioPlayer{
-    --primary:#2de415;
-    --secondary:#000000;
+    --primary:#ffffff;
+    --secondary:#d48beb;
     align-items: center;
     display: flex;
     width: auto;
@@ -28,8 +28,8 @@ color: var(--primary);
      background-color: var(--primary);
      border: none;
      border-radius: 50%;
-     width: 65px;
-     height:65px;
+     width: 66px;
+     height:66px;
      font-size: 61px;
      color: var(--secondary);
      display: flex;
