@@ -15,6 +15,7 @@
   background-color: #413f3f;
   border-radius: 15px 15px 0px 0px;
   /* border: 1px solid rgb(184, 184, 184); */
+  box-shadow: 6px 3px 6px 5px rgba(0, 0, 0, 0.267);
 }
 .icon {
   color: rgb(255, 255, 255);
