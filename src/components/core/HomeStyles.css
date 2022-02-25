@@ -9,8 +9,8 @@ justify-content: center;
 flex-wrap: wrap;
 }
 .playlist-default-items{
-    background-color: #0000003f;
-    width: 177px;
+    background-color: #f8f8f81c;
+    width: 157px;
     height: 35px;
     font-size: 22px;
     text-align: center;
