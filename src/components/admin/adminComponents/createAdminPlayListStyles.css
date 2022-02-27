@@ -1,0 +1,14 @@
+.play-list-container{
+    height: 600px;
+    width: 600px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+}
+.play-list-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.089);
+    margin: 2px;
+    padding: 5px;
+}

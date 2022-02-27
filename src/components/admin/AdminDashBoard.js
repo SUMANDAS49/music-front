@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getUserDetails } from '../auth/AuthHelper'
 import AddSong from './adminComponents/AddSong'
 import AllUsersList from './adminComponents/AllUsersList'
+import CreatePlayList from './adminComponents/CreatePlayList'
 import "./adminDashboardStyle.css"
 const AdminDashBoard = () => {
     const [user, setUser] = useState({})
@@ -24,13 +25,16 @@ const AdminDashBoard = () => {
                     <div className={taskNumber == 0 ? 'select left-item' : 'left-item'} onClick={() => { setTaskNumber(0) }}>Songs</div>
                     <div className={taskNumber == 1 ? 'select left-item' : 'left-item'} onClick={() => { setTaskNumber(1) }}>Add song</div>
                     <div className={taskNumber == 2 ? 'select left-item' : 'left-item'}>Edit songs</div>
-                    <div className={taskNumber == 3 ? 'select left-item' : 'left-item'}>Create playlist</div>
+                    <div className={taskNumber == 3 ? 'select left-item' : 'left-item'} onClick={() => { setTaskNumber(3) }}>Create playlist</div>
                     <div className={taskNumber == 4 ? 'select left-item' : 'left-item'} onClick={() => { setTaskNumber(4) }}> Users</div>
                 </div>
                 <div className='right'>
                     {taskNumber == 1 && <AddSong />}
                     {
                         taskNumber == 4 && <AllUsersList />
+                    }
+                    {
+                        taskNumber == 3 && <CreatePlayList />
                     }
                 </div>
             </div>
