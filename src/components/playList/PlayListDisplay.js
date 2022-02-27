@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import SongCard from '../../songs/SongCard'
-import SongListItem from '../../songs/SongListItem'
-import { getAllSongs } from '../../songs/SongsHelper'
-import Loader from '../../util/Loader'
+import SongCard from '../songs/SongCard'
+import SongListItem from '../songs/SongListItem'
+import { getAllSongs } from '../songs/SongsHelper'
+import Loader from '../util/Loader'
 
-import Base from '../../core/Base'
+import Base from '../core/Base'
 
 
-const AllSongsContainer = () => {
-    const [songs, setSongs] = useState([])
+const AllSongsContainer = ({ loading, songs, title }) => {
+
     const [clicked, setClicked] = useState(false);
     const [clickedDetails, setClickedDetails] = useState({})
-    const [loading, setLoanding] = useState(true);
+
     useEffect(() => {
-        getAllSongs().then((res) => {
-            // console.log(res)
-            setSongs(res.songs)
-            setLoanding(false)
-        })
+        document.title = 'All Songs'
+
     }, [])
+    useEffect(() => {
+        document.title = clickedDetails.title != undefined ? clickedDetails.title : "All Songs"
+    }, [clicked])
     return (
         <div>
             <Base>
-                {!clicked && <div className='page-title'>All Songs</div>}
+                {!clicked && <div className='page-title'>{title}</div>}
                 {!loading && !clicked && songs.map((song) => {
                     return <SongListItem key={`${song.title}`} setClicked={setClicked} setClickedDetails={setClickedDetails} data={song} />
                 })}

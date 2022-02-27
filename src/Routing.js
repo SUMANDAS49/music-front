@@ -6,7 +6,8 @@ import SignUp from './components/auth/SignUp'
 import Search from './components/core/core-components/Search'
 import Setting from './components/core/core-components/Setting'
 import Home from './components/core/Home'
-import AllSongsContainer from './components/songs/containers/AllSongsContainer'
+import AllSongsContainer from './components/playList/AllSongsContainer'
+import CreatedPlayLists from './components/playList/CreatedPlayLists'
 import LikedSongs from './components/songs/LikedSongs'
 import PrivateRoute from './components/util/PrivateRoute'
 import PublicRoute from './components/util/PublicRoute'
@@ -57,6 +58,11 @@ const Routing = () => {
                 <Route path="/adminArea" element={
                     <PrivateRoute redirectTo="/signup">
                         <AdminDashBoard />
+                    </PrivateRoute>
+                } />
+                <Route path="/defaultPlayList" element={
+                    <PrivateRoute redirectTo="/signup">
+                        <CreatedPlayLists />
                     </PrivateRoute>
                 } />
             </Routes>
