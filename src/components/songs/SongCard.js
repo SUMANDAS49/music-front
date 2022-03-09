@@ -6,7 +6,7 @@ import { likeSong, getLikedSongsById, unlikeSong } from './SongsHelper';
 
 import { AudioPlayer } from './AudioPlayer';
 
-const SongCard = ({ data, setClicked }) => {
+const SongCard = ({ data, setClicked, setClickedSongIndex, clickedSongIndex }) => {
     const [title, setTitle] = useState("")
     const [loading, setLoanding] = useState(true)
     const [likedSongs, setLikedSongs] = useState([])
@@ -69,7 +69,7 @@ const SongCard = ({ data, setClicked }) => {
                         unlikeHelper()
                     }}><FavoriteIcon /></div>}
                     {/* <audio className='audio-play' src={data.songLink} controls /> */}
-                    <AudioPlayer songLink={data.songLink} />
+                    <AudioPlayer setClickedSongIndex={setClickedSongIndex} clickedSongIndex={clickedSongIndex} songLink={data.songLink} />
                 </div>
             )
 

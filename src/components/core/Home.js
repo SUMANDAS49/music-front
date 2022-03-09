@@ -12,11 +12,13 @@ import { getUserDetails } from '../auth/AuthHelper'
 
 const Home = () => {
     const [adminPlayLists, setAdminPlayList] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         document.title = "freetify"
         getAllAdminPlayListAPICall().then((res) => {
             if (!res?.error) {
                 setAdminPlayList(res.allLists)
+                setLoading(false)
             }
 
         })
@@ -51,7 +53,7 @@ const Home = () => {
 
                     <Link style={{ textDecoration: "none" }} to="/allSongs"><div className='playlist-default-items'>All Songs</div></Link>
                     {
-                        adminPlayLists.map((lsts) => {
+                        !loading && adminPlayLists.map((lsts) => {
                             return (
                                 <Link style={{ textDecoration: "none" }} to={`/defaultPlayList?id=${lsts._id}`}>
                                     <div className='playlist-default-items'>

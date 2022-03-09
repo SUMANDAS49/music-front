@@ -11,6 +11,7 @@ const AllSongsContainer = ({ loading, songs, title }) => {
 
     const [clicked, setClicked] = useState(false);
     const [clickedDetails, setClickedDetails] = useState({})
+    const [clickedSongIndex, setClickedSongIndex] = useState(0)
 
     useEffect(() => {
         document.title = 'All Songs'
@@ -19,6 +20,26 @@ const AllSongsContainer = ({ loading, songs, title }) => {
     useEffect(() => {
         document.title = clickedDetails.title != undefined ? clickedDetails.title : "All Songs"
     }, [clicked])
+    useEffect(() => {
+        if (clicked) {
+            console.log(songs.indexOf(clickedDetails) + "*************")
+            setClickedSongIndex(songs.indexOf(clickedDetails))
+        }
+    }, [clicked])
+    useEffect(() => {
+        if (clicked) {
+            setClicked(false)
+            console.log("index is >>>>" + clickedSongIndex)
+
+            setClickedDetails(songs[clickedSongIndex % (songs.length)])
+
+            console.log("changed yesss!*********")
+            setTimeout(() => {
+                setClicked(true)
+            }, 1000)
+        }
+
+    }, [clickedSongIndex])
     return (
         <div>
             <Base>
@@ -27,7 +48,10 @@ const AllSongsContainer = ({ loading, songs, title }) => {
                     return <SongListItem key={`${song.title}`} setClicked={setClicked} setClickedDetails={setClickedDetails} data={song} />
                 })}
                 {
-                    !loading && clicked && <SongCard setClicked={setClicked} data={clickedDetails} />
+                    !loading && clicked && <SongCard setClicked={setClicked}
+                        data={clickedDetails}
+                        setClickedSongIndex={setClickedSongIndex}
+                        clickedSongIndex={clickedSongIndex} />
                 }
                 {
                     loading && <Loader />
