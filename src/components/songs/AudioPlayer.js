@@ -5,11 +5,12 @@ import { FiArrowLeft } from "react-icons/fi"
 import { FiArrowRight } from "react-icons/fi"
 import { BsPlayCircleFill } from "react-icons/bs"
 import { BsFillPauseCircleFill } from "react-icons/bs"
-const AudioPlayer = ({ songLink }) => {
+const AudioPlayer = ({ songLink, setClickedSongIndex, clickedSongIndex }) => {
     // states-----------------
     const [isPlaying, setIsPlaying] = useState(false)
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     // refrences-----
 
@@ -17,6 +18,11 @@ const AudioPlayer = ({ songLink }) => {
     const progressBar = useRef();
     const animationRef = useRef();
 
+
+    useEffect(() => {
+
+        togglePlayPause()
+    }, [])
 
     useEffect(() => {
         const seconds = Math.floor(audioPlayer.current.duration)
@@ -75,6 +81,7 @@ const AudioPlayer = ({ songLink }) => {
                 ref={audioPlayer}
                 controls src={songLink}
                 preload='metadata'
+                onEnded={() => { setClickedSongIndex(clickedSongIndex + 1) }}
             />
             {/* progress bar */}
             <div>
