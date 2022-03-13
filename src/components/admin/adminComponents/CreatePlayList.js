@@ -51,18 +51,25 @@ const CreatePlayList = () => {
     return (
         <div className='create-play-list-container'>
 
-            {!done && <div className='create-play-list-form'>
-                <span>Play list name:</span><input type="text" onChange={(e) => { setName(e.target.value) }} />
-                <div >Select songs</div>
-                <div className='play-list-container'>
+            {
+                !done &&
+                <div className='create-play-list-form'>
+                    <span>Play list name:</span><input type="text" onChange={(e) => { setName(e.target.value) }} />
+                    <div >Select songs</div>
+                    <div className='play-list-container'>
+                        {
+                            allSongs.map((song) => {
+                                return playListItems(song)
+                            })
+                        }
+                    </div>
                     {
-                        allSongs.map((song) => {
-                            return playListItems(song)
-                        })
+                        name.length >= 1 && songs.length >= 1 &&
+                        <button onClick={() => { submitHandler() }}>
+                            Submit
+                        </button>
                     }
                 </div>
-                {name.length >= 1 && songs.length >= 1 && <button onClick={() => { submitHandler() }}>Submit</button>}
-            </div>
             }
             {
                 done && !error && <h1>Success</h1>

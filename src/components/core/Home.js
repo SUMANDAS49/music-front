@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import SongCard from '../songs/SongCard'
-import SongListItem from '../songs/SongListItem'
-import { getAllSongs } from '../songs/SongsHelper'
+
 import Loader from '../util/Loader'
 
 import Base from './Base'
@@ -46,27 +44,33 @@ const Home = () => {
         <Base>
 
             <div className='home-container'>
-                <div className='wish-to-user'>
-                    {makeWish() + ` ${getUserDetails().name}...`}
-                </div>
-                <div className='playlist-default'>
+                {
+                    !loading && <>
+                        <div className='wish-to-user'>
+                            {makeWish() + "😉 "}<span className='user-name'>{` ${getUserDetails().name}...`}</span>
+                        </div>
+                        <div className='playlist-default'>
 
-                    <Link style={{ textDecoration: "none" }} to="/allSongs"><div className='playlist-default-items'>All Songs</div></Link>
-                    {
-                        !loading && adminPlayLists.map((lsts) => {
-                            return (
-                                <Link style={{ textDecoration: "none" }} to={`/defaultPlayList?id=${lsts._id}`}>
-                                    <div className='playlist-default-items'>
-                                        {lsts.playListName}
-                                    </div>
-                                </Link>
-                            )
-                        })
-                    }
+                            <Link style={{ textDecoration: "none" }} to="/allSongs"><div className='playlist-default-items'>All Songs</div></Link>
+                            {
+                                !loading && adminPlayLists.map((lsts) => {
+                                    return (
+                                        <Link style={{ textDecoration: "none" }} to={`/defaultPlayList?id=${lsts._id}`}>
+                                            <div className='playlist-default-items'>
+                                                {lsts.playListName}
+                                            </div>
+                                        </Link>
+                                    )
+                                })
+                            }
 
 
 
-                </div>
+                        </div>
+                    </>}
+                {
+                    loading && <Loader />
+                }
             </div>
 
         </Base >
