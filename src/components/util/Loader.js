@@ -2,7 +2,7 @@ import React from 'react';
 import "./utilStyle.css"
 const Loader = () => {
     return <div className='loader-container'>
-        <img className='loader-main' src='loader2.gif' />
+        <img className='loader-main' src='loader6.gif' />
     </div>;
 };
 

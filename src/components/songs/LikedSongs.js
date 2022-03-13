@@ -5,7 +5,7 @@ import SongCard from './SongCard';
 import SongListItem from './SongListItem';
 
 import { getLikedSongsFull } from './SongsHelper';
-let queue = [];
+
 const LikedSongs = () => {
     const [songs, setSongs] = useState([])
     const [clicked, setClicked] = useState(false);
@@ -21,18 +21,18 @@ const LikedSongs = () => {
     }, [])
     useEffect(() => {
         if (clicked) {
-            console.log(songs.indexOf(clickedDetails) + "*************")
+            // console.log(songs.indexOf(clickedDetails) + "*************")
             setClickedSongIndex(songs.indexOf(clickedDetails))
         }
     }, [clicked])
     useEffect(() => {
         if (clicked) {
             setClicked(false)
-            console.log("index is >>>>" + clickedSongIndex)
+            // console.log("index is >>>>" + clickedSongIndex)
 
             setClickedDetails(songs[clickedSongIndex % (songs.length)])
 
-            console.log("changed yesss!*********")
+            // console.log("changed yesss!*********")
             setTimeout(() => {
                 setClicked(true)
             }, 1000)
