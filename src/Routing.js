@@ -9,6 +9,7 @@ import Home from './components/core/Home'
 import AllSongsContainer from './components/playList/AllSongsContainer'
 import CreatedPlayLists from './components/playList/CreatedPlayLists'
 import LikedSongs from './components/songs/LikedSongs'
+import Video from './components/test/Video'
 import PrivateRoute from './components/util/PrivateRoute'
 import PublicRoute from './components/util/PublicRoute'
 
@@ -64,6 +65,11 @@ const Routing = () => {
                     <PrivateRoute redirectTo="/signup">
                         <CreatedPlayLists />
                     </PrivateRoute>
+                } />
+                <Route path="/video" element={
+                    <PublicRoute redirectTo="/">
+                        <Video />
+                    </PublicRoute>
                 } />
             </Routes>
         </BrowserRouter>
