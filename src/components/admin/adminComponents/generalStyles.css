@@ -1,0 +1,9 @@
+.listItem{
+    font-size: 25px;
+    padding: 6px;
+    background-color: rgba(213, 213, 213, 0.616);
+    width: 600px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
