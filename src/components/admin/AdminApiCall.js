@@ -73,3 +73,25 @@ export const getAllAdminPlayListAPICall = () => {
       console.log(err);
     });
 };
+
+export const updatePlayListApi = (name, songsAll, playListId) => {
+  const userData = getUserDetails();
+  const songs = [];
+  songsAll.forEach((s) => {
+    songs.push(s._id);
+  });
+  return fetch(`${API}/admin/playlist/update/${userData._id}/${playListId}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ playListName: name, songs }),
+  })
+    .then((results) => {
+      return results.json();
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
