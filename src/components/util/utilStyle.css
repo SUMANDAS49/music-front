@@ -21,3 +21,10 @@
   height: 110px;
   width: 342px;
 }
+
+
+/* ******************* Not allowed Page *********************** */
+
+.notAllowed{
+  background-color: aqua;
+}
