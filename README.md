@@ -1,71 +1,25 @@
-# Getting Started with Create React App
+# freetify
+*Let the music speak !*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### About the appliction :
+It is a music streaming web application build with React and node.js.
+It has all the important features that a morden music streaming application should have.
+For storing the files I have used _firebase storage_.
 
-## Available Scripts
+### Screenshoots:
+<div style="display:flex">
 
-In the project directory, you can run:
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182392432-914dcf5c-5e49-4a30-a7ab-b01a8b6b232e.jpeg" />
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182392348-13799677-a9ec-45ec-97f8-ce6565c98901.jpeg" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182395029-3096e5a8-9b17-43ba-80e5-a4f9b02c86bc.jpeg" />
 
-### `npm test`
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182392376-a0d34515-6e30-4886-ab74-b319fdd5f58d.jpeg" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182392578-3502c40f-5260-4122-a7bb-443bacac4972.jpeg" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# music-front
+<img style="height:400px" src="https://user-images.githubusercontent.com/58660679/182392198-1b32faa4-9374-4b7d-8f03-abf007ebcc64.png" />
+</div>
