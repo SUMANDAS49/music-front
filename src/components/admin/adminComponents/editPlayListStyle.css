@@ -47,6 +47,7 @@
     border-radius: 15px;
     color: white;
     cursor: pointer;
+    
 }
 .selected-songs-container{
     display: flex;
@@ -63,4 +64,6 @@
     min-height: 400px;
     height: 400px;
     overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
