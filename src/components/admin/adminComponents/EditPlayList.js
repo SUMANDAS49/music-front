@@ -6,6 +6,7 @@ import { updatePlayListApi } from "../AdminApiCall";
 import { Link } from "react-router-dom";
 import "./editPlayListStyle.css";
 import Loader from "../../util/Loader";
+import SongListItem from "../../songs/SongListItem";
 const EditPlayList = () => {
   const [songsInPlayList, setSongsInPlayList] = useState([]);
   const [allSongs, setAllSongs] = useState([]);
@@ -21,17 +22,17 @@ const EditPlayList = () => {
       setSongsInPlayList(result.playList.songs);
       setPlayListName(result.playList.playListName);
       // console.log(songsInPlayList);
-      getAllSongs().then((result) => {
+      getAllSongs().then((result2) => {
         let tempAllSongs = [];
-        for (let i = 0; i < result.songs.length; i++) {
-          let notMatched = false;
+        for (let i = 0; i < result2.songs.length; i++) {
+          let notMatched = true;
           for (let j = 0; j < songsInPlayList.length; j++) {
-            if (songsInPlayList[j]._id === result.songs[i]._id) {
-              notMatched = true;
+            if (result.playList.songs[j]._id === result2.songs[i]._id) {
+              notMatched = false;
             }
           }
-          if (!notMatched) {
-            tempAllSongs.push(result.songs[i]);
+          if (notMatched) {
+            tempAllSongs.push(result2.songs[i]);
           }
         }
         setAllSongs(tempAllSongs);
@@ -131,7 +132,7 @@ const EditPlayList = () => {
                       transferToSongsInPlayList(song);
                     }}
                   >
-                    {song.title}
+                    <SongListItem data={song} />
                   </h4>
                 );
               })}
