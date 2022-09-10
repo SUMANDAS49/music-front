@@ -14,3 +14,15 @@
   text-decoration: none;
   color: white;
 }
+.setting-item{
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 6px;
+  padding: 5px;
+}
+.bold-text{
+  font-weight: bold;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
