@@ -1,6 +1,7 @@
 .container {
-  background-color: yellow;
+  background-color: rgb(98, 98, 98);
   height: 50px;
+  color: white;
 }
 .head {
   display: flex;
@@ -9,6 +10,16 @@
 }
 .title {
   font-size: 25px;
+}
+.switch-user-mode{
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.switch-user-mode .Link{
+  text-decoration: none !important;
+  color: white;
+
 }
 .admin-details {
   display: flex;
@@ -25,14 +36,14 @@
 }
 .admin-body {
   width: 100vw;
-  height: 90vh;
-  background-color: aqua;
+  min-height: 100vh;
+  background-color: rgb(83, 83, 83);
   display: flex;
 }
 .left {
   width: 11vw;
-  background-color: rgb(39, 119, 46);
-  height: 90vh;
+  background-color: rgb(83, 85, 83);
+  min-height: 100vh;
 }
 .left .left-item {
   font-size: 20px;

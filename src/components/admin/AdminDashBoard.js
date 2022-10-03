@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import { getUserDetails } from "../auth/AuthHelper";
 import AddSong from "./adminComponents/AddSong";
 import AllUsersList from "./adminComponents/AllUsersList";
@@ -15,6 +17,7 @@ const AdminDashBoard = () => {
     <div className="container">
       <div className="head">
         <div className="title">Admin Area</div>
+        <div className="switch-user-mode"><Link className="Link" to="/setting">Back to user mode</Link></div>
         <div className="admin-details">
           <div className="admin-name">{user.name}</div>
           <img className="admin-pic" src={user.profilePic} />
