@@ -18,16 +18,23 @@ const EditPlayList = () => {
     // console.log(params);
     //first get all the songs in the playlist
     getAdminPlayListSongsAPICall(params.id).then((result) => {
-      console.log(result);
+      // console.log("**************************")
+      // console.log(result.playList.songs[0]);
+      // console.log("**************************")
       setSongsInPlayList(result.playList.songs);
       setPlayListName(result.playList.playListName);
       // console.log(songsInPlayList);
       getAllSongs().then((result2) => {
+      console.log("**************************")
+
+        console.log(result2)
+      console.log("**************************")
+
         let tempAllSongs = [];
         for (let i = 0; i < result2.songs.length; i++) {
           let notMatched = true;
-          for (let j = 0; j < songsInPlayList.length; j++) {
-            if (result.playList.songs[j]._id === result2.songs[i]._id) {
+          for (let j = 0; j < result.playList.songs.length; j++) {
+            if (result.playList.songs[j]._id == result2.songs[i]._id) {
               notMatched = false;
             }
           }
