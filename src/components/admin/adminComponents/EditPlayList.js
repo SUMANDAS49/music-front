@@ -125,7 +125,7 @@ const EditPlayList = () => {
       )}
       {!loading && (
         <div>
-          <h2 style={{ color: "white" }}>
+          <h2 style={{ color: "white", textAlign:"center" }}>
             All songs (accept the playlist songs)
           </h2>
           <div className="all-song-container">
@@ -134,12 +134,13 @@ const EditPlayList = () => {
               allSongs.map((song) => {
                 return (
                   <h4
-                    className="item"
+                    className="itemAll"
                     onClick={() => {
                       transferToSongsInPlayList(song);
                     }}
                   >
-                    <SongListItem data={song} />
+                    {song.title}
+                    <span className="singer-name-in-list"> ~By {song.singer}</span>
                   </h4>
                 );
               })}
