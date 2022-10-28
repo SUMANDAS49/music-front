@@ -64,6 +64,19 @@
     min-height: 400px;
     height: 400px;
     overflow: auto;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
+    width: 100vw;
+}
+.itemAll{
+    background-color: rgba(78, 80, 80, 0.333);
+    padding: 10px;
+    margin: 1px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.singer-name-in-list{
+    font-weight: lighter;
+    font-size: 13px;
+    color: rgb(88, 9, 86);
 }
